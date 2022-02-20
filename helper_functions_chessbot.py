@@ -19,7 +19,7 @@ def isPotentialChessboardTopic(sub):
 def invert(fen):
   return ''.join(reversed(fen))
 
-def generateMessage(fen, certainty, side, visualize_link):
+def generateMessage(fen, certainty, side, visualize_link, message=MESSAGE_TEMPLATE):
   """Generate response message using FEN, certainty and side for flipping link order"""
   vals = {} # Holds template responses
 
@@ -61,7 +61,7 @@ def generateMessage(fen, certainty, side, visualize_link):
 
   vals['visualize_link'] = visualize_link
   
-  return MESSAGE_TEMPLATE.format(**vals)
+  return message.format(**vals)
 
 
 

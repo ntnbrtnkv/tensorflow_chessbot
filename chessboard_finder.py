@@ -39,7 +39,7 @@ def nonmax_suppress_1d(arr, winsize=5):
       _arr[i] = 0
   return _arr
 
-def findChessboardCorners(img_arr_gray, noise_threshold = 8000):
+def findChessboardCorners(img_arr_gray, noise_threshold = 4000):
   # Load image grayscale as an numpy array
   # Return None on failure to find a chessboard
   #

@@ -5,6 +5,7 @@
 *.gif
 
 !example_input.png
+!screen.png
 
 # Ignore chessboard input images and tile outputs
 chessboards/
@@ -19,3 +20,6 @@ praw.ini
 !requirements.txt
 
 !readme_images/*
+
+dist/
+build/

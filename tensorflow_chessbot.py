@@ -39,6 +39,9 @@
 # [tensorflow tutorials](https://www.tensorflow.org/versions/0.6.0/tutorials/pdes/index.html)
 
 import os
+
+from helper_functions_chessbot import generateMessage
+from message_template import SIMPLE_MESSAGE_FORMAT
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1' # Ignore Tensorflow INFO debug messages
 import tensorflow as tf
 import numpy as np
@@ -197,6 +200,7 @@ def main(args):
   active = args.active
   print("---\nPredicted FEN:\n%s %s - - 0 1" % (short_fen, active))
   print("Final Certainty: %.1f%%" % (certainty*100))
+  print(generateMessage(short_fen, certainty, 0, 0, SIMPLE_MESSAGE_FORMAT))
 
 if __name__ == '__main__':
   np.set_printoptions(suppress=True, precision=3)

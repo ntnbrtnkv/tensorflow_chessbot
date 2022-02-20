@@ -36,3 +36,16 @@ with a certainty of **{certainty:.3f}%**. *{pithy_message}*
 ^( | Reply with a corrected FEN to add to my next training dataset)
 
 """
+
+SIMPLE_MESSAGE_FORMAT = """
+White to play: {lichess_analysis_w}
+Black to play: {lichess_analysis_b}
+
+---
+
+Inverted links
+
+White to play: {inverted_lichess_analysis_w}
+Black to play: {inverted_lichess_analysis_b}
+
+"""
